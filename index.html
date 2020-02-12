@@ -11,6 +11,11 @@
     <body>
 <div id="app" class="ui main container">
    <a v-bind:href="link" :title="message">{{ message }}</a> 
+   <ul>
+       <li v-for="personn in personns">
+            {{ personn }}
+       </li>
+   </ul>
    <div class="ui success message" v-if="success">
        <p>Bravo, votre message a marché</p>
    </div>

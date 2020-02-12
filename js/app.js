@@ -3,6 +3,7 @@ new Vue ({
     data: {
         message: 'Salut les gens',
         link: 'https://louis-allard.github.io/Portfolio/',
-        success: true
+        success: true,
+        personns : ['Louis','Aude','Maximilien','Aurélien']
     }
 })
