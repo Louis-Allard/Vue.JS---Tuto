@@ -8,7 +8,8 @@ new Vue ({
     },
     methods: {
         close: function() {
-            this.success = false
+            this.success = false,
+            this.message = 'Fermé'
         }
     }
 })
