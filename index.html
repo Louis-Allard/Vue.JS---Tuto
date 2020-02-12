@@ -1,5 +1,6 @@
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>Tuto Vue JS</title>
         <style>
             .main.container {
@@ -9,7 +10,10 @@
     </head>
     <body>
 <div id="app" class="ui main container">
-    {{ message }}
+   <a v-bind:href="link" :title="message">{{ message }}</a> 
+   <div class="ui success message" v-if="success">
+       <p>Bravo, votre message a marché</p>
+   </div>
 </div>
     </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
