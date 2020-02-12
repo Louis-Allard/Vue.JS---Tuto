@@ -8,9 +8,13 @@ let vm = new Vue ({
         seconds: 0
     },
     mounted: function() {
-        setInterval(() => {
+        this.$interval = setInterval(() => {
+            console.log('Time');
             this.seconds++;
         },1000)
+    },
+    destroyed: function() {
+        clearInterval(this.$interval);
     },
     methods: {
         close: function() {
