@@ -1,34 +1,44 @@
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Tuto Vue JS</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <style>
-            .main.container {
-                padding-top: 50px;
-            }
-        </style>
-    </head>
-    <body>
-<div id="app" class="ui main container">
-    <input type="text" v-model="message" />
-<!--
-   <a v-bind:href="link" :title="message">{{ message }}</a> 
-   <ul>
-       <li v-for="personn in personns">
-            {{ personn }}
-       </li>
-   </ul>
--->
-   <div class="ui success message" v-if="success"> 
-       <input type="checkbox" v-on:click="close">
-       <p>{{ message }}</p>
-   </div>
-   <div class="ui error message" v-else>
-       <p>Echec !</p>
-   </div>
-</div>
-    </body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
-    <script src="js/app.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tuto Vue JS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .main.container {
+            padding-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app" class="ui main container">
+        <input type="text" v-model="message" />
+
+        <a v-bind:href="link" :title="message">{{ message }}</a>
+        <ul>
+            <li v-for="personn in personns">
+                {{ personn }}
+            </li>
+        </ul>
+
+        <div class="alert alert-primary" v-if="success">
+            <input type="checkbox" v-on:click="close">
+            <p>{{ message }}</p>
+        </div>
+        <div class="alert alert-danger" v-else>
+            <p>Message d'alerte !</p>
+        </div>
+        <hr />
+
+        {{ personns }}
+        <button @click="addPersonn">Ajouter une personne</button>
+        <hr />
+        {{ seconds }}
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
+<script src="js/app.js"></script>
+
 </html>
