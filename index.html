@@ -11,14 +11,18 @@
     </head>
     <body>
 <div id="app" class="ui main container">
+    <input type="text" v-model="message" />
+<!--
    <a v-bind:href="link" :title="message">{{ message }}</a> 
    <ul>
        <li v-for="personn in personns">
             {{ personn }}
        </li>
    </ul>
-   <div class="ui success message" v-if="success">
-       <p>Bravo, votre message a marché</p>
+-->
+   <div class="ui success message" v-if="success"> 
+       <input type="checkbox" v-on:click="close">
+       <p>{{ message }}</p>
    </div>
    <div class="ui error message" v-else>
        <p>Echec !</p>
