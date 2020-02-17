@@ -14,7 +14,14 @@
 
 <body>
     <div id="app" class="ui main container">
-        <input type="text" v-model="message" />
+        <input type="checkbox" v-model="success">
+        <input type="text" v-model="message">
+        {{ message }}
+        <div class="ui message" :class="cls">
+            Salut les gens
+        </div>
+        <!--      CHAPITRE II
+       <input type="text" v-model="message" />
 
         <a v-bind:href="link" :title="message">{{ message }}</a>
         <ul>
@@ -35,7 +42,8 @@
         {{ personns }}
         <button @click="addPersonn">Ajouter une personne</button>
         <hr />
-        {{ seconds }}
+{{ seconds }}
+ -->
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>

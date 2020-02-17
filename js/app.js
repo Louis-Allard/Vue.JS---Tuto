@@ -1,15 +1,26 @@
 let vm = new Vue ({
     el: '#app',
     data: {
+        /*
         message: 'Salut les gens',
         link: 'https://louis-allard.github.io/Portfolio/',
         success: true,
         personns : ['Louis','Aude','Maximilien','Aurélien'],
         seconds: 0
+          */
+         success: false,
+         message: ''
     },
-    mounted: function() {
+    computed : {
+        cls: function() {
+            console.log("cls called");
+            return this.success == true ? 'success' : 'error'
+        }
+    }
+/* CHAPITRE II   
+ mounted: function() {
         this.$interval = setInterval(() => {
-            console.log('Time');
+            console.log('Time'); 
             this.seconds++;
         },1000)
     },
@@ -24,5 +35,5 @@ let vm = new Vue ({
         addPersonn: function() {
             this.personns.push("Samuel");
         }
-    }
+    } */
 })
