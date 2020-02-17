@@ -7,15 +7,26 @@ let vm = new Vue ({
         success: true,
         personns : ['Louis','Aude','Maximilien','Aurélien'],
         seconds: 0
-          */
+        
          success: false,
-         message: ''
+         message: ''  
+         */
+        firstname: 'Louis',
+        lastname: 'Allard',
+        fullname: ''
     },
+    /*
     computed : {
         cls: function() {
             console.log("cls called");
             return this.success == true ? 'success' : 'error'
         }
+        */
+    watch: {
+        fullname: function(value) {
+            console.log("watche", value);
+        }
+    }   
     }
 /* CHAPITRE II   
  mounted: function() {
@@ -36,4 +47,4 @@ let vm = new Vue ({
             this.personns.push("Samuel");
         }
     } */
-})
+)
